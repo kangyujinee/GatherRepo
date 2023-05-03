@@ -1,0 +1,45 @@
+# Code Peer Review Templete
+- 코더 : 김진홍
+- 리뷰어 : 강유진
+
+
+# PRT(PeerReviewTemplate)
+각 항목을 스스로 확인하고 체크하고 확인하여 작성한 코드에 적용하세요.
+- [O] 1.코드가 정상적으로 동작하나요?
+- [O] 2.문제를 제대로 이해했나요?
+- [O] 3.함수가 작동하는 방식을 잘 설명했나요?
+- [O] 4.발생 가능한 에러를 찾아서 디버깅을 했나요?
+- [O] 5.코드를 더 개선시켰나요?
+
+
+
+<1>
+word = [] # word를 리스트로 받지 않아도 문자열로도 인덱스 뒤집기 작동 가능할 것 같습니다..!
+word = input('회문: ')
+
+compare = word[::-1]
+
+while word:
+    if (word == compare):
+        print('입력한 단어는 회문이 맞습니다')
+        break
+    else:
+        print('다시 입력해보세요')
+        break
+
+
+
+
+<2> 
+compare = list() #list, str로 변환하지 않아도 실행될 것 같습니다..!
+compare = str(input("원하시는 회문을 입력해주세요: "))
+
+reversed_word = compare[::-1]
+
+if (compare == reversed_word):
+  print(compare)
+
+else:
+  print("다시 입력 하세요")
+
+# if문이라 회문 아닐 시 문장실행이 그냥 끝나버리기에 루프 돌 방법이 있다면 좋을 것 같습니다
